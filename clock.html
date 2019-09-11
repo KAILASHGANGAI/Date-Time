@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body onload="startTime()">
+    <div id="txt"></div>
+    <script>
+        function startTime(){
+            var today=new Date();
+            var h= today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+        
+        
+            document.getElementById("txt").innerHTML=  h +":"+m+":"+s;
+            var t = setTimeout(startTime,500);
+        }
+        function checkTime(i){
+            if( i< 10 ){
+                i= "0"+i;
+            }
+            return i;
+        }
+        document.getElementById("txt").style.fontSize="50px";
+        document.getElementById("txt").style.backgroundColor="gray";
+        document.getElementById("txt").style.color="red";
+        document.getElementById("txt").style.width="30vh";
+        document.getElementById("txt").style.border="1px solid black";
+        document.getElementById("txt").style.borderRadius="25%";
+        document.getElementById("txt").style.textShadow="1px 2px white";
+
+        
+        
+        </script>    
+</body>
+
+</html>
